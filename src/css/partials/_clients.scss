@@ -1,0 +1,68 @@
+@use "../lib/_mixins" as *;
+@use "../lib/_variables" as *;
+
+
+.clients-section {
+    margin-top: clamp(80px, 18.5vw, 173px);
+    h5 {
+        margin-left: clamp(35px, 8.13vw, 156px);
+        margin-right: clamp(35px, 8.13vw, 156px);
+        text-align: center;
+        color: #222522;
+        font-family: "roc-grotesk";
+        font-size: clamp(14px, 3.25vw, 20px);
+        font-weight: 400;
+        line-height: clamp(20.16px, 4.68vw, 28.8px);
+        letter-spacing: 0.05em;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+        @include breakpoint(md) {
+            text-align: left;
+        }
+    }
+
+    .slider-container {
+        margin-top: clamp(39px, 9.06vw, 64px);
+    
+    }
+
+
+    .swiper {
+        overflow: hidden;
+
+        @include breakpoint(md) {
+            margin-left: 93px;
+            margin-right: 103px;
+        }
+    
+    }
+    
+    // Wrapper para las slides 
+    .swiper-wrapper {
+        display: flex;
+        transition: transform 0.3s ease;
+    }
+    
+   // Slides individuales 
+    .swiper-slide {
+        flex: 0 0 auto; 
+        width: clamp(125px, 11.88vw, 228px); 
+        height: clamp(49px, 4.7vw, 90px); 
+        background-color: #FFFFFF;   
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px; 
+        text-align: center;
+
+        @include breakpoint(md) {
+            margin-right: clamp(60px, 7.7vw, 146px); 
+
+        }
+    
+    }
+
+}
+
+

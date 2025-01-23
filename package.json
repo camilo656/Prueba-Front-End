@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.dev.js",
-    "production": "webpack --config webpack.prod.js"
+    "production": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --config webpack.dev.js"
   },
   "keywords": [],
   "author": "Luisa Malaver - lead frontend 360pmi",
@@ -24,15 +25,19 @@
     "postcss-loader": "^8.1.1",
     "sass": "^1.79.4",
     "sass-loader": "^16.0.2",
+    "style-loader": "^4.0.0",
     "tailwindcss": "^3.4.13",
     "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.0",
     "webpack-merge": "^6.0.1"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "postcss-nested": "^6.2.0"
+    "gsap": "^3.12.7",
+    "postcss-nested": "^6.2.0",
+    "swiper": "^11.2.1"
   }
 }

@@ -1,3 +1,8 @@
+
+
+import "./auto-slider";
+import "./plans";
+
 /////////////////////////
 // IMPORT CSS
 //////////////////////////
@@ -21,12 +26,17 @@ import "../css/main.scss";
  ** @import ONLY IMPORT THE LIBRARY THAT IS GOING TO BE USED
  ***/
 
-// import gsap from "gsap";
+import gsap from "gsap";
 // import ScrollTrigger from "gsap/ScrollTrigger";
 // gsap.registerPlugin(ScrollTrigger);
 
 // Swiper
-// import Swiper from "swiper";
+//import Swiper from "swiper";
+// import { Pagination } from 'swiper/modules';
+
+// import 'swiper/scss';
+// //import 'swiper/scss/navigation';
+// import 'swiper/scss/pagination';
 
 //////////////////////////
 // @class CLASS BLOCKS
@@ -120,7 +130,8 @@ class FadeInOnScroll {
 ////////////////////
 
 window.addEventListener("DOMContentLoaded", (e) => {
-  new Header();
+  // new Header();
+  new FadeInOnScroll(".js-fadein");
 });
 
 ////////////////////
@@ -219,3 +230,13 @@ function keyboardFocus(e) {
 
 document.documentElement.classList.remove("no-js");
 document.addEventListener("keydown", keyboardFocus, false);
+
+
+
+
+
+
+
+/////////////////////////
+
+

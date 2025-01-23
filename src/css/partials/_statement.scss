@@ -1,0 +1,87 @@
+@use "../lib/_mixins" as *;
+@use "../lib/_variables" as *;
+
+
+
+
+.statement {
+    margin-top: clamp(84px, 19.53vw, 336px);
+    margin-left: clamp(18px, 4.18vw, 90px);
+    margin-right: clamp(18px, 4.18vw, 90px); 
+    text-align: center;
+
+    @include breakpoint(md) {
+        margin-left: clamp(90px, 11.72vw, 225px);
+        margin-right: clamp(90px, 11.72vw, 225px);
+    }
+
+
+    h1 {
+        font-family: "roc-grotesk";
+        color: #222522;
+        font-size: clamp(50px, 6.41vw, 123px);
+        font-weight: 500;
+        line-height: clamp(60px, 7.51vw, 144px);
+        letter-spacing: 0.03em;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+        @include breakpoint(md) {
+            padding-left: clamp(18px, 4.18vw, 80px);
+            padding-right: clamp(18px, 4.18vw, 80px);
+            letter-spacing: 0.05em;
+        }
+
+        span {
+            font-family: "pf-videotext";
+            font-weight: 400;
+            text-align: center;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+        }
+
+        img {
+            display: inline;
+        }
+
+        .fig1 {
+            width: clamp(46px, 6.52vw, 125px);
+            height: clamp(76px, 10.73vw, 206px);
+            position: relative;
+            bottom: clamp(20px, 3.13vw, 60px);;
+            margin-left: clamp(10px, 2.09vw, 40px);
+            margin-right: clamp(10px, 2.09vw, 40px);
+        }
+
+        .fig2 {
+            position: relative;
+            width: clamp(40px, 6.52vw, 125px);
+            height: clamp(39px, 6.23vw, 120px);
+            left: clamp(30px, 6.9vw, 110px);
+        }
+
+    }
+
+
+    p {
+        margin-top: clamp(40px, 6.93vw, 133px);
+        margin-left: clamp(19px, 4.4vw, 33px);
+        margin-right: clamp(19px, 4.4vw, 33px);
+        font-family: "roc-grotesk";
+        font-size: clamp(14px, 1.05vw, 20px);
+        font-weight: 400;
+        line-height: 28.8px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: #222522;
+
+        @include breakpoint(md) {
+            margin-left: clamp(65px, 18.9vw, 286px);
+            margin-right: clamp(65px, 18.9vw, 286px);
+        }
+
+    }
+}

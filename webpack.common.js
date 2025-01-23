@@ -37,13 +37,25 @@ module.exports = {
         },
       },
       {
-        test: /\.(sa|sc)ss$/,
-        exclude: /node_modules/,
+        test: /\.(scss|sass)$/i, 
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
-          "postcss-loader",
-          "sass-loader",
+          "css-loader", 
+          "postcss-loader", 
+          {
+            loader: "sass-loader", 
+            options: {
+              implementation: require("sass"),
+            },
+          },
+        ],
+      },
+      {                    // new
+        test: /\.css$/,
+        include: /node_modules/,
+        use: [
+          "style-loader",  // Injects CSS into the DOM
+          "css-loader",    // Handles CSS imports and resolves dependencies
         ],
       },
       {
@@ -86,4 +98,13 @@ module.exports = {
   externals: {
     jquery: "jQuery",
   },
+
+  devServer: {
+    contentBase: path.resolve(__dirname, 'dist'),
+    open: true,
+    hot: true,
+    historyApiFallback: true, // Allows handling of non-existent routes
+  },
+
+
 };

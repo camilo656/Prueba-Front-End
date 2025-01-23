@@ -1,3 +1,11 @@
 @use "tailwindcss/base";
 @use "tailwindcss/components";
 @use "tailwindcss/utilities";
+
+@use "./partials/hero";
+@use "./partials/support";
+@use "./partials/clients";
+@use "./partials/statement";
+@use "./partials/plans";
+@use "./partials/footer";
+

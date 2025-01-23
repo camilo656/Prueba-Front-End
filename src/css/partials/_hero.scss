@@ -1,0 +1,234 @@
+@use "../lib/_mixins" as *;
+@use "../lib/_variables" as *;
+
+
+
+// General Styles
+body {
+  margin: 0;
+  font-family: "roc-grotesk";
+  background-color: #222522;
+  color: #FBF2E6;
+}
+
+
+.hero-section {
+  position: relative;
+}
+
+// Header
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-top: clamp(19px, 1.52vw, 29px);
+
+  .logo {
+    position: relative;
+    left: clamp(19px, 2.35vw, 45px); 
+    width: clamp(50px, 4.95vw, 95px);
+    height: clamp(51px, 5.06vw, 97px);
+
+  }
+
+  .header-menu {
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 2.292vw, 44px);
+    position: relative;
+    right: clamp(19px, 2.09vw, 40px);
+    
+
+    p {
+      
+      display: none;
+
+      @include breakpoint(sm) {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        cursor: pointer;
+
+        .arrow {
+          display: inline;
+          width: 27px;
+          height: 27px;
+          position: relative;
+          bottom: 3px;
+        }
+
+        span {
+          font-family: "roc-grotesk";
+          font-size: clamp(12px, 1.15vw, 22px);
+          font-weight: 500;
+          line-height: 31.68px;
+          letter-spacing: 0.05em;
+          text-align: left;
+        }
+      }
+
+    }
+
+
+    .menu-button {
+      width: clamp(88px, 6.1vw, 117px);
+      height: clamp(37px, 2.71vw, 52px);
+      background-color: #00D1C6;
+      padding: 10px 27px 10px 27px;
+      gap: 10px;
+      border-radius: 36px;
+
+      color: #222522;
+      font-family: "roc-grotesk";
+      font-size: clamp(12px, 1.15vw, 22px);
+      font-weight: 500;
+      line-height: clamp(17.28px, 1.66vw, 31.68px);
+      letter-spacing: 0.05em;
+      text-align: left;
+      text-decoration-skip-ink: none;
+
+    }
+  }
+}
+
+
+
+// Hero Section
+.hero {
+  margin-right: clamp(19px, 4.41vw, 117px);
+  margin-left: clamp(19px, 4.41vw, 117px);
+  margin-top: 131px;
+  
+  @media (min-width: 1200px) {
+    margin-right: clamp(53px, 6.1vw, 117px);
+  }
+  
+  @include breakpoint(sm) {
+    margin-top: 14px;
+  }
+
+  .text {
+    height: clamp(175px, 27.87vw, 535px);
+    
+    h1 {
+      color: #FBF2E6;
+      font-family: "roc-grotesk";
+      font-size: clamp(35px, 6.41vw, 123px);
+      font-weight: 500;
+      line-height: clamp(45px, 7.51vw, 144px);
+      letter-spacing: 0.05em;
+      text-align: right;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      
+      .highlight {
+        color: #00D1C6;
+        font-family: "pf-videotext";
+        font-size: clamp(35px, 6.41vw, 123px);
+        font-weight: 400;
+        line-height: clamp(45px, 7.51vw, 144px);
+        letter-spacing: 0.05em;
+        text-align: right;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
+      }
+    }
+  }
+
+  .hero-image {
+    display: flex; 
+    justify-content: center;
+
+    @include breakpoint(md) {
+      justify-content: right;
+    }
+
+    img {
+      width: clamp(392px, 73.91vw, 1419px);
+      height: clamp(103px, 19.38vw, 372px);
+      gap: 0px;
+      border-radius: 186px;
+      margin-top: 41px;
+
+      @include breakpoint(md) {
+        margin-top: 32px;
+      }
+      
+    }
+  }
+
+}
+
+
+// Services Section
+.services {
+  margin-top: clamp(80px, 8.13vw, 156px);
+  margin-left: clamp(19px, 4.41vw, 34px);
+  margin-right: 19px;
+
+  $service-transition: 768px;
+  
+  @media (min-width: $service-transition) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: clamp(19px, 28.81vw, 553px);
+    margin-right: clamp(19px, 11.43vw, 229px);
+
+  }
+
+  .title {
+    font-family: "roc-grotesk";
+    font-size: clamp(25px, 2.81vw, 44px);
+    font-weight: 500;
+    line-height: clamp(25px, 2.81vw, 44px);
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    @media (min-width: $service-transition) {
+      width: 458px;
+      font-family: "roc-grotesk";
+      font-size: clamp(17px, 3.96vw, 76px);
+      font-weight: 500;
+      line-height: clamp(17px, 3.96vw, 76px);
+      letter-spacing: 0.05em;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+
+    }
+  }
+
+  p {
+    margin-top: 17px;
+    font-family: "roc-Grotesk";
+    color: #FBF2E6;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20.16px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    @media (min-width: $service-transition) {
+      margin-top: 0px;
+      width: 478px;
+      font-family: "roc-grotesk";
+      font-size: clamp(14px, 1.05vw, 20px);
+      font-weight: 400;
+      line-height: clamp(10px, 1.51vw, 28.8px);
+      letter-spacing: 0.05em;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+
+    }
+
+  }
+}
